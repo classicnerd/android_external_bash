@@ -47,6 +47,11 @@ include $(BUILD_EXECUTABLE)
 # ========================================================
 # bash configs
 # ========================================================
+<<<<<<< HEAD
+=======
+etc_files := $(shell ls -1 $(LOCAL_PATH)/etc/)
+
+>>>>>>> ev/ics
 BASH_ETC := $(TARGET_OUT)/etc/$(LOCAL_MODULE)/
 BASH_CONFIGS := $(addprefix $(LOCAL_PATH)/etc/,$(etc_files))
 $(BASH_CONFIGS): BASH_BINARY := $(LOCAL_MODULE)
