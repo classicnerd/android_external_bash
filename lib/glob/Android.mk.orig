@@ -1,12 +1,15 @@
 LOCAL_PATH:= $(call my-dir)
 
 # ========================================================
-# libtilde.a
+# libglob.a
 # ========================================================
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES:= \
-	tilde.c
+	glob.c \
+	smatch.c \
+	strmatch.c \
+	xmbsrtowcs.c
 
 LOCAL_C_INCLUDES += \
 	$(LOCAL_PATH)/../.. \
@@ -16,9 +19,7 @@ LOCAL_C_INCLUDES += \
 LOCAL_CFLAGS += \
 	-DHAVE_CONFIG_H
 
-LOCAL_MODULE := libtilde
-
-LOCAL_MODULE_TAGS := eng
+LOCAL_MODULE := libglob
 
 include $(BUILD_STATIC_LIBRARY)
 
